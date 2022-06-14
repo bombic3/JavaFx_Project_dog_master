@@ -73,8 +73,5 @@ public class Component {
 		this.componentCount = new SimpleIntegerProperty(componentCount);
 		this.componentPlace = new SimpleStringProperty(componentPlace);
 	}
-	
-	
-
-	
+		
 }

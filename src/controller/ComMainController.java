@@ -16,9 +16,9 @@ import model.Component;
 public class ComMainController implements Initializable{
 	
 	@FXML private TableView<Component> componentTable;
-	@FXML private TableColumn<Component, String> ComName;/* = new TableColumn<Component, String>("부품이름");*/
-	@FXML private TableColumn<Component, String> ComCode;/* = new TableColumn<Component, String>("부품코드");*/
-	@FXML private TableColumn<Component, Integer> ComCount; /*= new TableColumn<Component, Integer>("수량");*/
+	@FXML private TableColumn<Component, String> ComName;/* = new TableColumn<Component, String>("견종이름");*/
+	@FXML private TableColumn<Component, String> ComCode;/* = new TableColumn<Component, String>("나이");*/
+	@FXML private TableColumn<Component, Integer> ComCount; /*= new TableColumn<Component, Integer>("마릿수");*/
 	@FXML private TableColumn<Component, String> ComPlace; /* = new TableColumn<Component, String>("위치"); */ 
 	
 	private Main mainapp;
