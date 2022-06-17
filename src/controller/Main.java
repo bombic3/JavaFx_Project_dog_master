@@ -59,7 +59,7 @@ public class Main extends Application {
 			
 			Scene scene = new Scene(rootLayout);
 			primaryStage.setScene(scene);
-			primaryStage.setResizable(false);
+//			primaryStage.setResizable(false);
 			primaryStage.show();
 		} catch (Exception e) {
 			// TODO: handle exception
