@@ -17,7 +17,7 @@
         <items>
           <AnchorPane maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" prefHeight="500.0" prefWidth="400.0">
                <children>
-                  <TableView fx:id="componentTable" layoutX="4.0" layoutY="3.0" maxWidth="1.7976931348623157E308" prefHeight="426.0" prefWidth="392.0">
+                  <TableView fx:id="componentTable" layoutX="4.0" layoutY="3.0" maxWidth="1.7976931348623157E308" prefHeight="506.0" prefWidth="500.0">
                     <columns>
                       <TableColumn fx:id="ComName" prefWidth="113.0" text="견종" />
                       <TableColumn fx:id="ComCode" prefWidth="102.0" text="나이" />

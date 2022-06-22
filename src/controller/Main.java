@@ -33,6 +33,7 @@ public class Main extends Application {
 			this.primaryStage = primaryStage;
 			ComMainController comMainController = new ComMainController();
 			comMainController.setPrimaryStage(primaryStage);
+			//primaryStage.setResizable(true);
 			
 			setRootLayout();
 			setComMainView();
@@ -40,8 +41,9 @@ public class Main extends Application {
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
-	}
 	
+	}
+
 	public static void main(String[] args) {
 		launch(args);
 	}
