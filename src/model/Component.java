@@ -8,7 +8,7 @@ import javafx.beans.property.StringProperty;
 public class Component {
 
 	private final StringProperty componentName;
-	private final StringProperty componentCode;
+	private final StringProperty componentAge;
 	private final IntegerProperty componentCount;
 	private final StringProperty componentPlace;
 	
@@ -22,13 +22,13 @@ public class Component {
 	}
 
 
-	public String getComponentCode() {
-		return componentCode.get();
+	public String getComponentAge() {
+		return componentAge.get();
 	}
 
 
-	public void setComponentCode(String componentCode) {
-		this.componentCode.set(componentCode);
+	public void setComponentAge(String componentAge) {
+		this.componentAge.set(componentAge);
 	}
 
 
@@ -56,7 +56,7 @@ public class Component {
 	}
 	
 	public StringProperty comCodeProperty() {
-		return componentCode;
+		return componentAge;
 	}	
 	
 	public IntegerProperty comCountProperty() {
@@ -67,9 +67,9 @@ public class Component {
 		return componentPlace;
 	}
 	
-	public Component(String componentName, String componentCode, Integer componentCount,String componentPlace) {
+	public Component(String componentName, String componentAge, Integer componentCount,String componentPlace) {
 		this.componentName = new SimpleStringProperty(componentName);
-		this.componentCode = new SimpleStringProperty(componentCode);
+		this.componentAge = new SimpleStringProperty(componentAge);
 		this.componentCount = new SimpleIntegerProperty(componentCount);
 		this.componentPlace = new SimpleStringProperty(componentPlace);
 	}

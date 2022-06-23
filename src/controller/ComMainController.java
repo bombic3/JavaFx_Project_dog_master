@@ -17,7 +17,7 @@ public class ComMainController implements Initializable{
 	
 	@FXML private TableView<Component> componentTable;
 	@FXML private TableColumn<Component, String> ComName;/* = new TableColumn<Component, String>("견종이름");*/
-	@FXML private TableColumn<Component, String> ComCode;/* = new TableColumn<Component, String>("나이");*/
+	@FXML private TableColumn<Component, String> ComAge;/* = new TableColumn<Component, String>("나이");*/
 	@FXML private TableColumn<Component, Integer> ComCount; /*= new TableColumn<Component, Integer>("마릿수");*/
 	@FXML private TableColumn<Component, String> ComPlace; /* = new TableColumn<Component, String>("위치"); */ 
 	
@@ -42,7 +42,7 @@ public class ComMainController implements Initializable{
 	public void initialize(URL location, ResourceBundle resources) {
 		// TODO Auto-generated method stub
 		ComName.setCellValueFactory(new PropertyValueFactory<Component, String>("componentName"));
-		ComCode.setCellValueFactory(new PropertyValueFactory<Component, String>("componentCode"));
+		ComAge.setCellValueFactory(new PropertyValueFactory<Component, String>("componentAge"));
 		ComCount.setCellValueFactory(new PropertyValueFactory<Component, Integer>("componentCount"));
 		ComPlace.setCellValueFactory(new PropertyValueFactory<Component, String>("componentPlace"));
 

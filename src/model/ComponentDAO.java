@@ -91,7 +91,7 @@ public class ComponentDAO {
 				
 			PreparedStatement pstmt = conn.prepareStatement(SQL);
 			for (Component component : componentList) {
-			String code = component.getComponentCode();
+			String code = component.getComponentAge();
 			String name = component.getComponentName();
 			int count = component.getComponentCount();
 			String location = component.getComponentPlace();
