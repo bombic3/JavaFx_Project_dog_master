@@ -11,7 +11,7 @@ import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 import model.Component;
-
+import javafx.stage.Stage;
 
 public class ComMainController implements Initializable{
 	
