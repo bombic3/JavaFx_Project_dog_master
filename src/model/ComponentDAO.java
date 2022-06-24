@@ -40,7 +40,7 @@ public class ComponentDAO {
 			
 			while (rs.next()) {
 				
-				Component component = new Component(rs.getString("classify"),rs.getString("component_code"), rs.getInt("com_count"), rs.getString("com_place"));
+				Component component = new Component(rs.getString("classify"),rs.getInt("component_age"), rs.getInt("com_count"), rs.getString("com_place"));
 				componentList.add(component);
 			}
 			
@@ -91,12 +91,12 @@ public class ComponentDAO {
 				
 			PreparedStatement pstmt = conn.prepareStatement(SQL);
 			for (Component component : componentList) {
-			String code = component.getComponentAge();
+			int age = component.getComponentAge();
 			String name = component.getComponentName();
 			int count = component.getComponentCount();
 			String location = component.getComponentPlace();
 				
-			pstmt.setString(1, code);
+			pstmt.setInt(1, age);
 			pstmt.setString(2, name);
 			pstmt.setInt(3, count);
 			pstmt.setString(4, location);

@@ -17,7 +17,7 @@ public class ComMainController implements Initializable{
 	
 	@FXML private TableView<Component> componentTable;
 	@FXML private TableColumn<Component, String> ComName;/* = new TableColumn<Component, String>("견종이름");*/
-	@FXML private TableColumn<Component, String> ComAge;/* = new TableColumn<Component, String>("나이");*/
+	@FXML private TableColumn<Component, Integer> ComAge;/* = new TableColumn<Component, String>("나이");*/
 	@FXML private TableColumn<Component, Integer> ComCount; /*= new TableColumn<Component, Integer>("마릿수");*/
 	@FXML private TableColumn<Component, String> ComPlace; /* = new TableColumn<Component, String>("위치"); */ 
 	
@@ -42,7 +42,7 @@ public class ComMainController implements Initializable{
 	public void initialize(URL location, ResourceBundle resources) {
 		// TODO Auto-generated method stub
 		ComName.setCellValueFactory(new PropertyValueFactory<Component, String>("componentName"));
-		ComAge.setCellValueFactory(new PropertyValueFactory<Component, String>("componentAge"));
+		ComAge.setCellValueFactory(new PropertyValueFactory<Component, Integer>("componentAge"));
 		ComCount.setCellValueFactory(new PropertyValueFactory<Component, Integer>("componentCount"));
 		ComPlace.setCellValueFactory(new PropertyValueFactory<Component, String>("componentPlace"));
 
@@ -56,7 +56,7 @@ public class ComMainController implements Initializable{
 	}
 	@FXML
 	private void addAction() {
-		Component component = new Component("", "", 0, "");
+		Component component = new Component("", 0, 0, "");
 		int returnValue = mainapp.setComponentDataView(component);
 		if ( returnValue == 1) {
 			mainapp.getComponentList().add(component);
