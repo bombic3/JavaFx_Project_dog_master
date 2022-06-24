@@ -20,7 +20,7 @@
                   <TableView fx:id="componentTable" layoutX="4.0" layoutY="3.0" maxWidth="1.7976931348623157E308" prefHeight="506.0" prefWidth="500.0">
                     <columns>
                       <TableColumn fx:id="ComName" prefWidth="113.0" text="견종" />
-                      <TableColumn fx:id="ComCode" prefWidth="102.0" text="나이" />
+                      <TableColumn fx:id="ComAge" prefWidth="102.0" text="나이" />
                         <TableColumn fx:id="ComCount" prefWidth="78.0" text="마릿수" />
                         <TableColumn fx:id="ComPlace" prefWidth="98.0" text="보호센터 위치" />
                     </columns>

@@ -28,7 +28,7 @@ public class ComDataController {
 	private void confirmAction() {
 		if(valid()) {
 			component.setComponentName(cnameField.getText());
-			component.setComponentAge(Integer.valueOf(cnumberField.getText()));
+			component.setComponentAge(cnumberField.getText());
 			component.setComponentCount(Integer.valueOf(ccountField.getText()));
 			component.setComponentPlace(clocField.getText());
 			
@@ -75,7 +75,7 @@ public class ComDataController {
 	public void setComponent(Component component) {
 		this.component = component;
 		cnameField.setText(component.getComponentName());
-		cnumberField.setText(String.valueOf(component.getComponentAge()));
+		cnumberField.setText(component.getComponentAge());
 		ccountField.setText(String.valueOf(component.getComponentCount()));
 		clocField.setText(component.getComponentPlace());
 

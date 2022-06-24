@@ -34,8 +34,8 @@ public class BarChartController {
 	public void setComponentList(List<Component> componentList) {
 		int[] counters = new int[26];
 		for(Component component : componentList) {
-			int integer = component.getComponentAge();
-			counters[integer -65]++;
+			char character = component.getComponentAge().charAt(0);;
+			counters[character -65]++;
 		}
 		
 		XYChart.Series<String, Integer> series = new XYChart.Series<>();

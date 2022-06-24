@@ -33,7 +33,6 @@ public class Main extends Application {
 			this.primaryStage = primaryStage;
 			ComMainController comMainController = new ComMainController();
 			comMainController.setPrimaryStage(primaryStage);
-			//primaryStage.setResizable(true);
 			
 			setRootLayout();
 			setComMainView();
