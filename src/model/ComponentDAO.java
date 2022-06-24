@@ -31,7 +31,7 @@ public class ComponentDAO {
 	
 	public ObservableList<Component> getComponentList(){
 		
-		String SQL = "SELECT * FROM component_stock";
+		String SQL = "SELECT * FROM dog_master";
 		ObservableList<Component> componentList = FXCollections.observableArrayList();
 		
 		try {
@@ -40,7 +40,7 @@ public class ComponentDAO {
 			
 			while (rs.next()) {
 				
-				Component component = new Component(rs.getString("classify"),rs.getString("component_age"), rs.getInt("com_count"), rs.getString("com_place"));
+				Component component = new Component(rs.getString("classify"),rs.getString("dog_code"), rs.getInt("com_count"), rs.getString("com_place"));
 				componentList.add(component);
 			}
 			
@@ -67,7 +67,7 @@ public class ComponentDAO {
 
 		try {
 			
-			String SQL = "DELETE FROM component_stock";
+			String SQL = "DELETE FROM dog_master";
 			PreparedStatement pstmt = conn.prepareStatement(SQL);
 			pstmt.executeQuery();
 			pstmt.close();
@@ -85,18 +85,18 @@ public class ComponentDAO {
 		try {
 			
 			System.out.println(componentList.size());
-			String SQL = "INSERT INTO component_stock";
-			SQL += "(age,classify,com_count,com_place)";
+			String SQL = "INSERT INTO dog_master";
+			SQL += "(dog_code,classify,com_count,com_place)";
 			SQL += " VALUES(?,?,?,?)";
 				
 			PreparedStatement pstmt = conn.prepareStatement(SQL);
 			for (Component component : componentList) {
-			String age = component.getComponentAge();
+			String code = component.getComponentCode();
 			String name = component.getComponentName();
 			int count = component.getComponentCount();
 			String location = component.getComponentPlace();
 				
-			pstmt.setString(1, age);
+			pstmt.setString(1, code);
 			pstmt.setString(2, name);
 			pstmt.setInt(3, count);
 			pstmt.setString(4, location);
